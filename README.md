@@ -44,6 +44,9 @@ This project is uploaded to github and deployed it on Netlify. Here's the link b
 (irengfebrianweek3.netlify.app)
 
 This project is far from perfect, and I need your feedback about this website to be better on the next project.
-P.s: this is the first time I'm making hamburger section with alot of trial and error 
+P.s: This week 3 I failed in alot of way, for example my image carousel dan failed dark mode switcher. I'm gonna fix it later!
+
+Instagram: @Febriaan22
+Phone: 0821-3611-1204
 
 Thank You!
