@@ -17,7 +17,7 @@
 <body>
     <nav>
         <span class="relative-container">
-            <img src="https://www.albionpleiad.com/wp-content/uploads/2023/04/The_Eras_Tour_Logo.png" alt="The Eras Tour Logo" />
+            <img src="Images/The_Eras_Tour_Logo.webp" alt="The Eras Tour Logo" />
             <b>The Eras Tour</b>
             <span class="circle-red">13</span>
         </span>
@@ -57,32 +57,36 @@
                     <img 
                     src="Images/Taylor Swift 1.webp"
                     alt="Taylor Swift Performing All Too Well (10 Minutes Version)"
-                    />
+                    width="auto"
+                    height="auto"/>
                 </div>
                 <div class="Taylor-Swift-Photo-Item" id="item-2">
                     <img 
                     src="Images/Taylor Swift 2.webp"
                     alt="Taylor Swift during Folklore Era" 
-                    width="360px"
-                    height="640px"/>
+                    width="auto"
+                    height="auto"/>
                 </div>
                 <div class="Taylor-Swift-Photo-Item" id="item-3">
                     <img 
                     src="Images/Taylor Swift 3.webp"
                     alt="Taylor Swift Performing 22" 
-                    />
+                    width="auto"
+                    height="auto"/>
                 </div>
                 <div class="Taylor-Swift-Photo-Item" id="item-4">
                     <img 
                     src="Images/Taylor Swift 4.webp"
                     alt="Taylor Swift Peforming ...Ready for it?" 
-                    />
+                    width="auto"
+                    height="auto"/>
                 </div>
                 <div class="Taylor-Swift-Photo-Item" id="item-5">
                     <img 
-                    src="Images/Taylor Swift 5.jpeg"
+                    src="Images/Taylor Swift 5.webp"
                     alt="Taylor Swift Perfoming Acoustic Set" 
-                    />
+                    width="auto"
+                    height="auto"/>
                 </div>
             </div>
         </section>
@@ -91,22 +95,23 @@
             <div class="Carousel-Taylor">
                 <div class="slider">
                     <img id="Slide-1"
-                    src="https://variety.com/wp-content/uploads/2023/05/GettyImages-1488309935.jpg"
+                    src="Images/RainShow1.webp"
                     alt="Taylor performing August during Folklore Set" />
                     <img id="Slide-2"
-                    src="https://www.billboard.com/wp-content/uploads/2023/04/taylor-swift-eras-vegas-billboard-1548.jpg?w=942&h=623&crop=1"
+                    src="Images/LoverSet.webp"
                     alt="Cruel Summer" />
                     <img id="Slide-3"
-                    src="https://blog.siriusxm.com/wp-content/uploads/2023/03/GettyImages-1476134463-1.jpg?w=940"
+                    src="Images/MidnightSet.webp"
                     alt="Taylor Performing Vigilante Shit on Midnights Era" />
                 </div>
                 <div class="Slider-nav">
-                    <a href="#Slide-1"></a>
-                    <a href="#Slide-2"></a>
-                    <a href="#Slide-3"></a>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
             </div>
         </section>
+
         <section id="Eras-Tour-Facts">
             <h2>Facts about The Eras Tour</h2>
             <div class="flex-container">
@@ -118,11 +123,15 @@
                     <li>The Eras Tour playing 44 songs, 10 different acts, and 200 minutes of running time</li>
                 </ul>
                 <figure>
-                    <img src="Images/The Man.jpeg"
+                    <picture>
+                        <source
+                        media="(max-width: 480px)"
+                        srcset="Images/the-man.webp"
+                        >
+                    <img src="Images/The Man.webp"
                     alt="During 'The Man', swift uses scaffolding and office props to emulate a corporate environment"
-                    width="500"
-                    height="700"
-                    layout="responsive"/>
+                    />
+                    </picture>
                     <figcaption>Taylor Swift performing <em>The Man</em> with office props to emulate a corporate</figcaption>
                 </figure>
             </div>
@@ -199,18 +208,19 @@
                     <label for="ambitious">Ambitious</label>
                 </div>
                 <div>
-                    <p>Tell us why you love the Eras Tour:</p>
-                    <textarea rows="6"></textarea>
+                    <p><label for="EraReview">Tell us why you love the Eras Tour:</label></p>
+                    <textarea id="EraReview" name="EraReview" rows="6"></textarea>
                 </div>
                 <div>
                     <p>Upload your Favorite Taylor Swift eras photo here:</p>
                     <input
                     type="file"
-                    id="#photo"
+                    id="photo"
                     name="myErasPhoto"
                     required
                     accept="image/png, image/jpeg"
                     />
+                    <input type="submit">
                 </div>
             </fieldset>
             <button type="submit">Submit</button>
@@ -219,9 +229,19 @@
     </main>
 
     <script>
-        function myfunction(){
-            var element = document.body;
-            element.classList.toggle("dark-mode");
+        // initial state
+        if (localStorage.getItem("darkMode") === "true") {
+            document.getElementById("checkbox-dark-mode").checked = true;
+            document.body.classList.add('dark-mode');
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            if (!document.getElementById("checkbox-dark-mode").checked) {
+                localStorage.setItem("darkMode", false);
+            } else {
+                localStorage.setItem("darkMode", true);
+            }
         }
     </script>
 </body>

@@ -246,17 +246,17 @@ header {
     flex-direction: column;
     justify-content: center;
     padding-top: 48px;
-    background-image: url("Images/TaylorsEras.jpeg");
+    background-image: url("Images/TaylorsEras.webp");
     background-position: top center;
     background-size: cover;
 }
 nav .circle-red {
     font-size: 8px;
-    background-color: rgb(255, 0, 0);
+    background-color: maroon;
     border-radius: 100%;
     width: 16px;
     height: 16px;
-    color: rgba(15, 9, 9, 0.555);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,55 +390,55 @@ nav .circle-red {
     }
 
 /* Carousel */
+.Moreofera {
+    padding: 6% 2% 55% 2%;
+}
 
-    .Moreofera {
-        padding: 2rem;
-    }
+.Carousel-Taylor {
+    position: relative;
+    max-width: 150rem;
+    margin: auto;
+}
 
-    .Carousel-Taylor {
-        position: relative;
-        max-width: 150rem;
-        margin: auto;
-    }
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem;
+    border-radius: 0.5rem;
+}
 
-    .slider {
-        display: flex;
-        aspect-ratio: 16 / 9;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        box-shadow: 0 1.5rem 3rem -0.75rem;
-        border-radius: 0.5rem;
-    }
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
 
-    .slider img {
-        flex: 1 0 100%;
-        scroll-snap-align: start;
-        object-fit: cover;
-    }
+.Slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
 
-    .Slider-nav {
-        display: flex;
-        column-gap: 1rem;
-        position: absolute;
-        bottom: 1.25rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-    }
+.dot {
+    cursor: pointer;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: midnightblue;
+    opacity: 0.50;
+    transition: opacity ease 150ms;
+}
 
-    .Slider-nav a{
-        width: 0.5rem;
-        height: 0.5rem;
-        border-radius: 50%;
-        background-color: #fff;
-        opacity: 0.75;
-        transition: opacity ease 250ms;
-    }
-
-    .Slider-nav a:hover {
-        opacity: 1;
-    }
+.active, .dot:hover {
+    opacity: 1;
+}
 
     /* for tablet and desktop */
     @media only screen and (min-width: 768px) {
