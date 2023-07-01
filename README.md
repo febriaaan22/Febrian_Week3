@@ -45,6 +45,7 @@ This project is uploaded to github and deployed it on Netlify. Here's the link b
 
 This project is far from perfect, and I need your feedback about this website to be better on the next project.
 P.s: This week 3 I failed in alot of way, for example my image carousel dan failed dark mode switcher. I'm gonna fix it later! (Friday, June 30th 2023)
+
 Update: I fixed everything, I just need time to relax and came back to do a recheck. The Struggle is real (July 1st, 2023)
 
 Instagram: @Febriaan22
